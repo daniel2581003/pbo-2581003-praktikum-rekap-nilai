@@ -57,3 +57,17 @@ public class RekapNilai {
             jumlah++;
 
         } while (nilai != SELESAI);
+
+        System.out.println();
+        System.out.println("Nilai sah   : " + jumlah);
+
+        if (jumlah == 0) {
+            System.out.println("Tidak ada nilai sah.");
+        } else {
+            double rata = total / jumlah;
+            String status = rata >= 60 ? "LULUS" : "TIDAK LULUS";
+            System.out.println("Rata-rata   : " + String.format("%.2f", rata));
+            System.out.println("Status      : " + status);
+        }
+    }
+}
